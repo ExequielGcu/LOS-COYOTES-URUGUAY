@@ -13,3 +13,32 @@ window.onscroll = function () {
     elemento1.style.bottom = posicion * 0.1 + "px";
     elemento2.style.top = posicion * 0.1 + "px";
 }
+
+
+
+const $cartas = document.querySelectorAll(".carta");
+for (let i = 0; i < $cartas.length; i++) {
+let elemento = $cartas[i];
+elemento.setAttribute('id', `carta${i}`);
+
+let idCarta = document.getElementById(elemento.id);
+idCarta.addEventListener( "click", () => {
+idCarta.classList.toggle("vuelta");
+});
+}
+
+
+// Swiper init
+var swiper = new Swiper('.slider-cartas', {
+slidesPerView: 1,
+spaceBetween: 10,
+pagination: {
+el:'.slider-cartas__paginacion',
+clickable: true,
+renderBullet: function (index, className ) {
+  return '<span class="' + className + '">' + (index + 1) + '</span>';
+},
+}
+});
+
+

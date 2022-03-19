@@ -9,7 +9,7 @@
 }
 
 body{
-    background: #F5F5F5;
+    background: #F5F5F5 !important;
 }
 
 header{
@@ -77,17 +77,12 @@ header{
 
 /*PORTADA - COVER*/
 
-main{
-    max-width: 1200px;
-    height: calc(100vh + 800px);
-    padding: 40px;
-    margin: auto;
-}
+
 
 .cover{
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin: 60px 20px 0px 20px;
 }
 
 .text__information-cover{
@@ -128,8 +123,7 @@ main{
 }
 
 .media__cover video{
-    width: 100%;
-    margin-top: -40px;
+    width: 90%;
     margin-left: 60px;
 }
 
